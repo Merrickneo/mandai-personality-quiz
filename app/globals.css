@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --jungle-deep: #142b1e;
+  --jungle-mid: #1f4430;
+  --jungle-line: rgba(244, 239, 217, 0.14);
+  --leaf: #4c9a6b;
+  --leaf-light: #8fd9ae;
+  --sunset: #f0964b;
+  --sunset-light: #f7b877;
+  --sand: #f4efd9;
+  --ink-muted: #b9c9ba;
+}
+
+@theme inline {
+  --color-jungle-deep: var(--jungle-deep);
+  --color-jungle-mid: var(--jungle-mid);
+  --color-jungle-line: var(--jungle-line);
+  --color-leaf: var(--leaf);
+  --color-leaf-light: var(--leaf-light);
+  --color-sunset: var(--sunset);
+  --color-sunset-light: var(--sunset-light);
+  --color-sand: var(--sand);
+  --color-ink-muted: var(--ink-muted);
+  --font-display: var(--font-fredoka);
+  --font-sans: var(--font-geist-sans);
+}
+
+/* The quiz intentionally commits to one look — a jungle-at-dusk palette —
+   rather than following the OS light/dark preference. */
+body {
+  background: var(--jungle-deep);
+  color: var(--sand);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
