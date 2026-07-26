@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import type { Animal } from "@/lib/types";
+import { withBasePath } from "@/lib/basePath";
 import DidYouKnowBubble from "./DidYouKnowBubble";
 import ShareButton from "./ShareButton";
 
@@ -21,7 +22,7 @@ export default function ResultScreen({
         className="relative w-full max-w-md overflow-hidden rounded-[2rem] shadow-2xl"
         style={{
           backgroundColor: "var(--jungle-mid)",
-          backgroundImage: `linear-gradient(to top, rgba(10, 20, 14, 0.92) 0%, rgba(10, 20, 14, 0.45) 55%, rgba(10, 20, 14, 0.1) 100%), url(${animal.image})`,
+          backgroundImage: `linear-gradient(to top, rgba(10, 20, 14, 0.92) 0%, rgba(10, 20, 14, 0.45) 55%, rgba(10, 20, 14, 0.1) 100%), url(${withBasePath(animal.image)})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
